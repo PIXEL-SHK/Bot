@@ -8,7 +8,7 @@ client = commands.Bot(command_prefix = '$')
 @client.event
 async def on_ready():
     print('Bot is ready')
-
+    
 @client.command()
 async def 청소(ctx, amount=99):
     await ctx.channel.purge(limit=amount)
@@ -21,4 +21,5 @@ async def kick(ctx, member : discord.Member, *, reason=None):
 async def ban(ctx, member : discord.Member, *, reason=None):
     await member.ban(reason=reason)
 
-client.run('Njk2MjMzNTc3OTE4MTAzNTUy.XolwEQ._3kTRFVEbXcS8TIndG-KZFVFjVI')
+access_token = os.environ["BOT_TOKEN"]  
+client.run(access_token)
