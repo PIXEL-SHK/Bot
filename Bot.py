@@ -10,7 +10,7 @@ async def on_ready():
     print('Bot is ready')
     
 @client.command()
-async def 청소(ctx, amount=99):
+async def 청소(ctx, amount=10):
     await ctx.channel.purge(limit=amount)
 
 @client.command()
